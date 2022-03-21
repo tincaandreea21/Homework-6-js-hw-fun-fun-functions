@@ -56,6 +56,25 @@ var secondFunction = function () {
 // 5.
 
 // Question 4
+
+// 1. The variable `superhero` is `_______` to the `fightSuperman` function.
+// 2. The variable `superhero` is `_______` to the `theRealHero` function.
+// 3. What happens when you invoke `fightSuperman`?
+// 4. What happens when you invoke `theRealHero`?
+// 5. Does `theRealHero` have access to `superhero` inside `fightSuperman`?
+// 4. :dart: Commit -m "Question 4 done"
+
+var superhero = "Batman";
+
+var fightSuperman = function () {
+  var superhero = "Superman";
+  console.log(superhero);
+};
+
+var theRealHero = function () {
+  console.log(superhero);
+};
+// Question 4
 // 1.
 // 2.
 // 3.
