@@ -30,6 +30,23 @@ var addition = function () {
 // 1.
 // 2.
 // 3.
+// Question 3
+
+// 1. The variable `vegetable` is `_______` to the `firstFunction` function.
+// 2. The variable `vegetable` is `_______` to the `second Function` function.
+// 3. Can the `secondFunction` access `vegetable`?
+// 4. What happens when you invoke `firstFunction`?
+// 5. What happens when you invoke `secondFunction`?
+// 6. :dart: Commit -m "Question 3 done"
+
+var firstFunction = function () {
+  var vegetable = "snap pea";
+  console.log(vegetable);
+};
+
+var secondFunction = function () {
+  console.log(vegetable);
+};
 
 // Question 3
 // 1.
