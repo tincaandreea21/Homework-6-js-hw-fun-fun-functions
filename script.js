@@ -15,6 +15,18 @@ var sayGreeting = function () {
 // 3.
 
 // Question 2
+// 1. The variable `number` is `_______` to the `addition` function.
+// 2. Can the function access `number`?
+// 3. What happens when you invoke `addition`?
+// 4. :dart: Commit -m "Question 2 done"
+
+var number = 5;
+
+var addition = function () {
+  console.log(number);
+};
+
+// Question 2
 // 1.
 // 2.
 // 3.
