@@ -1,111 +1,80 @@
 // Question 1
-// 1. The variable `greeting` is `______` to the `sayGreeting` function.
-// 2. Can the function access `greeting`?
-// 3. What happens when you invoke `sayGreeting`?
-// 4. :dart: Commit -m "Question 1 done"
-
-var sayGreeting = function () {
-  var greeting = "Aloha!";
-  console.log(greeting);
-};
-
-// Question 1
-// 1.
-// 2.
-// 3.
+// 1. local;
+// 2. yes;
+// 3. 'Aloha!'
 
 // Question 2
-// 1. The variable `number` is `_______` to the `addition` function.
-// 2. Can the function access `number`?
-// 3. What happens when you invoke `addition`?
-// 4. :dart: Commit -m "Question 2 done"
-
-var number = 5;
-
-var addition = function () {
-  console.log(number);
-};
-
-// Question 2
-// 1.
-// 2.
-// 3.
-// Question 3
-
-// 1. The variable `vegetable` is `_______` to the `firstFunction` function.
-// 2. The variable `vegetable` is `_______` to the `second Function` function.
-// 3. Can the `secondFunction` access `vegetable`?
-// 4. What happens when you invoke `firstFunction`?
-// 5. What happens when you invoke `secondFunction`?
-// 6. :dart: Commit -m "Question 3 done"
-
-var firstFunction = function () {
-  var vegetable = "snap pea";
-  console.log(vegetable);
-};
-
-var secondFunction = function () {
-  console.log(vegetable);
-};
+// 1. global
+// 2. yes
+// 3. '5'
 
 // Question 3
-// 1.
-// 2.
-// 3.
-// 4.
-// 5.
+// 1. local
+// 2. out of scope
+// 3. no
+// 4. "snap pea"
+// 5. not found
 
 // Question 4
-
-// 1. The variable `superhero` is `_______` to the `fightSuperman` function.
-// 2. The variable `superhero` is `_______` to the `theRealHero` function.
-// 3. What happens when you invoke `fightSuperman`?
-// 4. What happens when you invoke `theRealHero`?
-// 5. Does `theRealHero` have access to `superhero` inside `fightSuperman`?
-// 4. :dart: Commit -m "Question 4 done"
-
-var superhero = "Batman";
-
-var fightSuperman = function () {
-  var superhero = "Superman";
-  console.log(superhero);
-};
-
-var theRealHero = function () {
-  console.log(superhero);
-};
-// Question 4
-// 1.
-// 2.
-// 3.
-// 4.
-// 5.
+// 1. global
+// 2. global
+// 3."Superman"
+// 4. "Batman"
+// 5. no
 
 // Question 5
-// 1.
-// 2.
-// 3.
-// 4.
-// 5.
-// 6.
-// 7.
+// 1. global
+// 2. "beep"
+// 3. function declaration
+// 4. error
+// 5. "beep"
+// 6. "beep " "beep "
+// 7. "beep " "beep "
 
+makeNoise();
+
+function makeNoise() {
+  beep = "beep";
+  console.log(beep);
+}
+console.log(beep);
 // Question 6
 
 var sumOfNums = function (numsArray) {
   // Your Code Here
+  let sum = 0;
+  for (let i = 0; i < numsArray.length; i++) {
+    sum += numsArray[i];
+  }
+  return sum;
 };
 
 // Question 7
 
 var numsGreaterThanTen = function (numsArray) {
   // Your Code Here
+  let arr = [];
+  for (let i = 0; i < numsArray.length; i++) {
+    if (numsArray[i] > 10) {
+      arr.push(numsArray[i]);
+    }
+  }
+  return arr;
 };
 
 // Question 8
 
-var noneHaveTwoOrMoreVowels = function (words) {
+var allStartingWithA = function (words) {
   // Your Code Here
+  let result = true;
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].charAt(0) === "a" || words[i].charAt(0) === "A") {
+      result = true;
+    } else {
+      return false;
+    }
+  }
+  return result;
 };
 
 // Question 9
@@ -115,14 +84,22 @@ var hasAtLeastNVowels = function (word, n) {
 
 // Question 10
 var buildObjectFromWords = function (words) {
-  // Your Code Here
+  let result = {};
+  let key = "";
+  let value = 0;
+  for (let i = 0; i < words.length; i++) {
+    key = words[i];
+    value = words[i].length;
+    result[key] = value;
+  }
+  return result;
 };
 
 /// DO NOT EDIT BELOW THIS LINE ///
 module.exports = {
   sumOfNums: sumOfNums,
   numsGreaterThanTen: numsGreaterThanTen,
-  noneHaveTwoOrMoreVowels: noneHaveTwoOrMoreVowels,
-  buildObjectFromWords: buildObjectFromWords,
   allStartingWithA: allStartingWithA,
+  hasAtLeastNVowels: hasAtLeastNVowels,
+  buildObjectFromWords: buildObjectFromWords,
 };
