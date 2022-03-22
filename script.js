@@ -32,7 +32,6 @@
 // 7. "beep " "beep "
 
 makeNoise();
-
 function makeNoise() {
   beep = "beep";
   console.log(beep);
@@ -79,8 +78,17 @@ var allStartingWithA = function (words) {
 
 // Question 9
 var hasAtLeastNVowels = function (word, n) {
-  // Your Code Here
+  let result = "";
+  if (n < 0) {
+    result = null;
+  } else if (word.match(/[aeiou]/gi).length >= n) {
+    result = true;
+  } else {
+    result = false;
+  }
+  return result;
 };
+console.log(hasAtLeastNVowels("DANGROUS", 3));
 
 // Question 10
 var buildObjectFromWords = function (words) {
