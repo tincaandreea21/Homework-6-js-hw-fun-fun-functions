@@ -32,10 +32,10 @@
 // 7. "beep " "beep "
 
 makeNoise();
-function makeNoise() {
+var makeNoise = function () {
   beep = "beep";
   console.log(beep);
-}
+};
 console.log(beep);
 // Question 6
 
@@ -47,6 +47,11 @@ var sumOfNums = function (numsArray) {
   }
   return sum;
 };
+// if (numsArray.length ===0){
+//   return 0
+// } else {
+//   return numsArray.reduce((prev, curr) => prev, curr, 0)
+// }
 
 // Question 7
 
@@ -75,6 +80,18 @@ var allStartingWithA = function (words) {
   }
   return result;
 };
+var allStartingWithA = function (words) {
+  if (words.length === 0) {
+    return true;
+  } else {
+    let wordsWithNotA = words.some(
+      (item) => !(item.startsWith("a") || item.startsWith("A"))
+    );
+    if (wordsWithNotA) {
+      return false;
+    } else return true;
+  }
+};
 
 // Question 9
 var hasAtLeastNVowels = function (word, n) {
@@ -102,6 +119,16 @@ var buildObjectFromWords = function (words) {
   }
   return result;
 };
+
+// let obj = {
+//   cat: 3,
+//   house: 5,
+//   elephant: 8,
+//   'my-elephant': 6
+// };
+
+// obj.cat
+// obj['my-elephant']
 
 /// DO NOT EDIT BELOW THIS LINE ///
 module.exports = {
