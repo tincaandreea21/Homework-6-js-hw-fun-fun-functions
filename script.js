@@ -1,3 +1,5 @@
+// test 1
+
 // Question 1
 // 1. local;
 // 2. yes;
@@ -31,12 +33,12 @@
 // 6. "beep " "beep "
 // 7. "beep " "beep "
 
-makeNoise();
-var makeNoise = function () {
-  beep = "beep";
-  console.log(beep);
-};
-console.log(beep);
+// makeNoise();
+// var makeNoise = function () {
+//   beep = "beep";
+//   console.log(beep);
+// };
+// console.log(beep);
 // Question 6
 
 var sumOfNums = function (numsArray) {
@@ -80,6 +82,7 @@ var allStartingWithA = function (words) {
   }
   return result;
 };
+
 var allStartingWithA = function (words) {
   if (words.length === 0) {
     return true;
